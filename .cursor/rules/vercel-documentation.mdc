@@ -1,0 +1,11 @@
+---
+description: Use the official Vercel documentation as the primary Vercel reference
+alwaysApply: true
+---
+
+# Vercel Documentation
+
+- For deployments, projects, environments, domains, observability, functions, and platform configuration, use the official documentation as the primary reference: https://vercel.com/docs
+- Prefer Vercel documentation and connected Vercel tools over assumptions about current platform behavior.
+- Inspect the relevant project and deployment state before recommending configuration changes.
+- Do not deploy, modify production settings, domains, or environment variables without explicit user authorization.

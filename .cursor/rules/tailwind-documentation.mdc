@@ -1,0 +1,11 @@
+---
+description: Use the official Tailwind CSS documentation as the primary Tailwind reference
+alwaysApply: true
+---
+
+# Tailwind CSS Documentation
+
+- For Tailwind CSS setup, implementation, debugging, and review, use the official Vite documentation as the primary reference: https://tailwindcss.com/docs/installation/using-vite
+- Consult the relevant official documentation page when utility behavior or configuration is uncertain.
+- Follow the Vite plugin approach used by this project.
+- Keep solutions compatible with the Tailwind CSS and `@tailwindcss/vite` versions declared in `package.json`.

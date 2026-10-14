@@ -1,0 +1,11 @@
+---
+description: Use the official Vite documentation as the primary Vite reference
+alwaysApply: true
+---
+
+# Vite Documentation
+
+- For Vite configuration, plugins, development, builds, and troubleshooting, use the official guide as the primary reference: https://vite.dev/guide/
+- Check the Vite version declared in `package.json` before applying documentation examples.
+- Prefer version-specific documentation when the current guide describes a newer major release.
+- Preserve the project's existing React and Tailwind CSS plugin integration unless a task explicitly requires changing it.

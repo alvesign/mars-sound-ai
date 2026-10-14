@@ -1,0 +1,12 @@
+---
+description: Use the official Supabase documentation as the primary Supabase reference
+alwaysApply: true
+---
+
+# Supabase Documentation
+
+- For Supabase Database, Auth, Storage, Realtime, Edge Functions, APIs, and CLI, use the official documentation as the primary reference: https://supabase.com/docs
+- Prefer official documentation and connected Supabase tools over assumptions about current platform behavior.
+- Inspect the existing schema, migrations, and Row Level Security policies before proposing database changes.
+- Use migrations for schema changes and preserve secure client/server credential boundaries.
+- Do not modify production data, authentication, policies, or deployed functions without explicit user authorization.

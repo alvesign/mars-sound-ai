@@ -1,0 +1,8 @@
+---
+alwaysApply: true
+---
+
+Sempre gerar código com nível de produção (production-ready)
+Evitar soluções genéricas ou boilerplate fraco
+Preferir soluções modernas e performáticas
+Explicar decisões quando forem complexas

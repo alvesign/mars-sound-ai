@@ -1,0 +1,11 @@
+---
+description: Use the official GitHub documentation as the primary GitHub reference
+alwaysApply: true
+---
+
+# GitHub Documentation
+
+- For GitHub repositories, authentication, pull requests, issues, Actions, security, and GitHub CLI, use the official Portuguese documentation as the primary reference: https://docs.github.com/pt
+- Consult the relevant official documentation page before recommending commands that affect remotes, credentials, branches, or repository settings.
+- Prefer secure, current authentication and permission practices.
+- Do not perform destructive or externally visible GitHub actions without explicit user authorization.

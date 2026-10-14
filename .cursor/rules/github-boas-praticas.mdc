@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+
+Commits pequenos e descritivos
+Usar padrão de commit (feat:, fix:, refactor:, chore:)
+Nunca commitar .env ou dados sensíveis
+Criar branches por feature (feature/nome)
+Sempre abrir pull request antes de merge
+Revisar código antes de aprovar
+Manter histórico limpo
+Evitar commits genéricos como "update"

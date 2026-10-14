@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+
+Sempre escrever código limpo, legível e modular
+Evitar duplicação de código (DRY)
+Priorizar composição ao invés de herança
+Criar funções e componentes pequenos e reutilizáveis
+Nomear variáveis e funções de forma descritiva (sem abreviações confusas)
+Separar lógica de negócio da UI
+Evitar comentários desnecessários; o código deve ser autoexplicativo
+Sempre tratar erros (try/catch ou fallback UI)
+Garantir responsividade (mobile-first)
+Evitar qualquer hardcode sensível (tokens, keys, URLs privadas)

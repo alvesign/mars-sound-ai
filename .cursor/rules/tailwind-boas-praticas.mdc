@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+
+Usar classes utilitárias ao invés de CSS customizado
+Evitar classes muito longas e repetitivas (criar componentes)
+Priorizar consistência visual (spacing, cores, tipografia)
+Usar design system (cores, fontes e espaçamentos definidos)
+Sempre aplicar mobile-first
+Evitar inline styles
+Usar variantes (hover, focus, responsive) corretamente
+Criar componentes reutilizáveis para padrões repetidos
+Evitar overdesign (UI simples e clara)
+Garantir acessibilidade (contraste, focus states)

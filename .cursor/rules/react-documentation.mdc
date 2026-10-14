@@ -1,0 +1,11 @@
+---
+description: Use the official React documentation as the primary React reference
+alwaysApply: true
+---
+
+# React Documentation
+
+- For React implementation, debugging, review, and architectural decisions, use the official Portuguese documentation as the primary reference: https://pt-br.react.dev/learn
+- Consult the relevant documentation page when behavior or API usage is uncertain.
+- Prefer current documented React patterns over deprecated or legacy APIs.
+- Keep solutions compatible with the React version declared in this project's `package.json`.

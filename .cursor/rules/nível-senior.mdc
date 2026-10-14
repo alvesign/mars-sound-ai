@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+Pensar sempre em escalabilidade desde o início
+Evitar acoplamento forte entre partes do sistema
+Criar abstrações apenas quando necessário
+Otimizar performance antes de escalar
+Código deve ser fácil de manter por outras pessoas
+Sempre pensar na experiência do usuário (UX)
+Priorizar velocidade de desenvolvimento + qualidade

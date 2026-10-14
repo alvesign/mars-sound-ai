@@ -1,0 +1,17 @@
+---
+alwaysApply: true
+---
+
+Usar apenas functional components
+Utilizar hooks ao invés de classes
+Nunca usar useEffect sem necessidade
+Evitar useEffect para lógica que pode ser derivada diretamente
+Usar useState apenas quando necessário (evitar excesso de estado)
+Levantar estado apenas quando necessário (state lifting controlado)
+Componentes devem ter responsabilidade única
+Evitar props drilling (usar context ou composição)
+Criar componentes reutilizáveis sempre que possível
+Usar lazy loading para componentes pesados
+Sempre adicionar key única em listas
+Evitar lógica complexa diretamente no JSX
+Padronizar estrutura de pastas (components, hooks, services, utils)

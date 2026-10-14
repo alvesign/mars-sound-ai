@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+Manter estrutura simples e organizada
+Separar config de ambiente (.env)
+Nunca expor variáveis sensíveis no frontend
+Utilizar import dinâmico para otimizar bundle
+Evitar dependências desnecessárias
+Manter build leve e rápido
+Usar aliases para imports (ex: @/components)

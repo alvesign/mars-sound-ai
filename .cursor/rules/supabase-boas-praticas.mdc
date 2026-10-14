@@ -1,0 +1,14 @@
+---
+alwaysApply: true
+---
+
+Nunca expor service_role key no frontend
+Usar RLS (Row Level Security) sempre ativado
+Criar policies claras e seguras
+Validar dados antes de enviar para o banco
+Evitar lógica complexa no frontend (delegar ao backend quando necessário)
+Usar funções (RPC) para operações mais complexas
+Estruturar tabelas com nomes claros e consistentes
+Sempre tratar erros das queries
+Evitar múltiplas chamadas desnecessárias
+Usar select específico ao invés de *

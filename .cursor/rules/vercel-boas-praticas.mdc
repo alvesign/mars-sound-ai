@@ -1,0 +1,12 @@
+---
+alwaysApply: true
+---
+
+Garantir que build passe sem erros
+Configurar corretamente variáveis de ambiente
+Nunca expor secrets no código
+Otimizar performance (lazy loading, imagens)
+Monitorar logs de erro
+Usar preview deployments para testes
+Garantir SEO básico (meta tags, title)
+Evitar requests desnecessários no carregamento inicial
