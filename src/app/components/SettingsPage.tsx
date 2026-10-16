@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Switch } from "./ui/switch";
 import { CategoryChip } from "./ui/CategoryChip";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/button";
 import { useLibrary } from "../context/LibraryContext";
 import { notifySuccess } from "../lib/notify";
 

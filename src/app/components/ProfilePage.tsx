@@ -3,7 +3,7 @@ import { useMusicPlayer } from "../context/MusicContext";
 import { useLibrary } from "../context/LibraryContext";
 import { formatDuration } from "../types/library";
 import { TrackRow, TrackTableHeader } from "./ui/TrackRow";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
