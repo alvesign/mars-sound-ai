@@ -87,6 +87,10 @@ function AppShell() {
       if (!mounted) return;
       setIsAuthenticated(Boolean(data.session));
       setSessionReady(true);
+    }).catch(() => {
+      if (!mounted) return;
+      setIsAuthenticated(false);
+      setSessionReady(true);
     });
     const { data } = supabase.auth.onAuthStateChange((_event, session) => {
       setIsAuthenticated(Boolean(session));
@@ -108,7 +112,14 @@ function AppShell() {
   };
 
   if (!sessionReady) {
-    return <div className="h-screen" style={{ backgroundColor: "var(--color-bg-base, #0d0d0d)" }} />;
+    return (
+      <div
+        className="flex h-screen items-center justify-center"
+        style={{ backgroundColor: "var(--color-bg-base, #0d0d0d)" }}
+      >
+        <p className="text-sm text-[#bababa]">Carregando…</p>
+      </div>
+    );
   }
 
   if (!isAuthenticated) {
