@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import imgImage20 from "figma:asset/88af55817e06e5beb26b97b8b37558d42203bf97.png";
 import svgPaths from "../../imports/svg-67owiawy17";
+import { useLibrary } from "../context/LibraryContext";
 
 function SearchIcon() {
   return (
@@ -27,6 +27,7 @@ interface NavbarProps {
 }
 
 export function Navbar({ onMenuToggle, onAvatarClick, onSearch, onUploadClick }: NavbarProps) {
+  const { profile } = useLibrary();
   const [searchValue, setSearchValue] = useState("");
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -133,7 +134,7 @@ export function Navbar({ onMenuToggle, onAvatarClick, onSearch, onUploadClick }:
             (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--color-border-subtle)";
           }}
         >
-          <img src={imgImage20} alt="Perfil" className="w-full h-full object-cover" />
+          <img src={profile.avatarUrl} alt="Perfil" className="w-full h-full object-cover" />
         </button>
       </div>
     </header>

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { supabase } from "../../lib/supabase";
-import imgBackground from "figma:asset/dd6a162f4eb13b36696ba6e356b8e8df40db09c3.png";
 import imgRectangle3 from "figma:asset/97e074a98bd267b7e793590cf7916ed3199aac5e.png";
+
+const AUTH_BACKGROUND_URL =
+  "https://kacqyrjkkdyznercqhwh.supabase.co/storage/v1/object/public/img-site/magnific__ultrawide-cinematic-cyberpunk-wallpaper-for-a-prem__44938.jpg";
 
 type AuthView = "login" | "register" | "forgot-request" | "forgot-success" | "forgot-reset";
 
@@ -165,7 +167,7 @@ function AuthInput({
             color: "#f8f8f8",
             boxSizing: "border-box",
           }}
-          className="placeholder-opacity-40 placeholder-[#f8f8f8]"
+          className="placeholder:text-[#f8f8f8]/25"
         />
       </div>
     </div>
@@ -787,10 +789,9 @@ export function AuthPage({ onAuthenticated }: AuthPageProps) {
       >
         {/* Background image */}
         <img
-          src={imgBackground}
-          alt="DJ background"
+          src={AUTH_BACKGROUND_URL}
+          alt="Cyberpunk background"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ opacity: 1 }}
         />
         {/* Dark overlay */}
         <div
