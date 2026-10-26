@@ -1,0 +1,13 @@
+---
+description: Após alterações no banco Supabase, executar DCP (Deploy MCP → Commit → Push)
+globs: supabase/**/*
+alwaysApply: false
+---
+
+# DCP
+
+Sempre que houver alterações de banco Supabase (migrations, schema, RLS, RPC, storage, seed SQL), ler e seguir a skill `.agents/skills/dcp/SKILL.md`.
+
+Ordem obrigatória: **Deploy via MCP → Commit → Push**.
+
+Projeto: Mars Sound (`kacqyrjkkdyznercqhwh`).
