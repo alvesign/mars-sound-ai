@@ -25,7 +25,26 @@ function authErrorMessage(message: string) {
   if (normalized.includes("already registered") || normalized.includes("already been registered")) {
     return "Este e-mail já está cadastrado.";
   }
+  if (normalized.includes("provider is not enabled") || normalized.includes("unsupported provider")) {
+    return "Login com Google ainda não está habilitado no Supabase.";
+  }
+  if (normalized.includes("redirect") || normalized.includes("redirect_uri")) {
+    return "URL de redirecionamento não autorizada. Confira Site URL e Redirect URLs no Supabase.";
+  }
   return message;
+}
+
+async function signInWithGoogle() {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin,
+      queryParams: {
+        prompt: "select_account",
+      },
+    },
+  });
+  return error;
 }
 
 interface AuthPageProps {
@@ -235,17 +254,26 @@ function PrimaryButton({
 }
 
 // Google button
-function GoogleButton({ label, onClick }: { label: string; onClick?: () => void }) {
+function GoogleButton({
+  label,
+  onClick,
+  disabled = false,
+}: {
+  label: string;
+  onClick?: () => void;
+  disabled?: boolean;
+}) {
   return (
     <button
       type="button"
       onClick={onClick}
+      disabled={disabled}
       style={{
         width: "100%",
         height: "56px",
         background: "#24191b",
         border: "1px solid #5e5e5e",
-        cursor: "pointer",
+        cursor: disabled ? "not-allowed" : "pointer",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -256,8 +284,11 @@ function GoogleButton({ label, onClick }: { label: string; onClick?: () => void 
         lineHeight: "1.5",
         color: "#f8f8f8",
         transition: "background 0.2s",
+        opacity: disabled ? 0.7 : 1,
       }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "#2c1e20")}
+      onMouseEnter={(e) => {
+        if (!disabled) e.currentTarget.style.background = "#2c1e20";
+      }}
       onMouseLeave={(e) => (e.currentTarget.style.background = "#24191b")}
     >
       <GoogleIcon />
@@ -395,8 +426,17 @@ function LoginForm({
       </p>
       <OrDivider />
       <GoogleButton
-        label="Google"
-        onClick={() => setMessage("O login com Google entra quando a autenticação do backend estiver pronta.")}
+        label={submitting ? "Redirecionando..." : "Google"}
+        disabled={submitting}
+        onClick={async () => {
+          setSubmitting(true);
+          setMessage("");
+          const error = await signInWithGoogle();
+          if (error) {
+            setSubmitting(false);
+            setMessage(authErrorMessage(error.message));
+          }
+        }}
       />
       <FooterLink
         text="Não tem uma conta?"
@@ -486,8 +526,17 @@ function RegisterForm({
       {message && <AuthMessage>{message}</AuthMessage>}
       <OrDivider />
       <GoogleButton
-        label="Cadastrar com Google"
-        onClick={() => setMessage("O cadastro com Google entra quando a autenticação do backend estiver pronta.")}
+        label={submitting ? "Redirecionando..." : "Cadastrar com Google"}
+        disabled={submitting}
+        onClick={async () => {
+          setSubmitting(true);
+          setMessage("");
+          const error = await signInWithGoogle();
+          if (error) {
+            setSubmitting(false);
+            setMessage(authErrorMessage(error.message));
+          }
+        }}
       />
       <FooterLink
         text="Já tem uma conta?"
